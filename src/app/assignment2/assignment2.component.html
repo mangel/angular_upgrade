@@ -1,0 +1,7 @@
+<h1>Assignment 2</h1>
+<button type="button" class="btn btn-primary" (click)="onToggleText()">Display Details</button>
+<p *ngIf="showText">Secret Password = {{ 'tuna' }}</p>
+<div *ngFor="let entry of log; let i = index as i;">
+  <span>{{index}}</span>
+  <p [ngStyle]="{backgroundColor: getBackgroundColor(i+1)}" [ngClass]="{white: i + 1 >= 5}">Index {{ i }}, {{ entry }}</p>
+</div>
